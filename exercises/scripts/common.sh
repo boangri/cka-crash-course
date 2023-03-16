@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -z ${K8S_VERSION+x} ]; then
-  K8S_VERSION=1.23.4-00
+  K8S_VERSION=1.23.17-00   # 1.23.4-00
 fi
 
 apt-get update && apt-get install apt-transport-https ca-certificates curl software-properties-common

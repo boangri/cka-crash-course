@@ -1,0 +1,10 @@
+sudo kubeadm init --apiserver-advertise-address 192.168.56.10 --pod-network-cidr 172.18.0.0/16 --upload-certs
+
+
+kubeadm join 192.168.56.10:6443 --token dt6dn1.36m3i0dn8hbgt2f7 \
+        --discovery-token-ca-cert-hash sha256:fcae829e69d373e4fc3500e345a3c1137b087253f7ab08a89f937c1c018875b6
+
+kubeadm token create --print-join-command
+kubeadm join 192.168.56.10:6443 --token olalqg.b61pq9u42s51ava9 --discovery-token-ca-cert-hash sha256:fcae829e69d373e4fc3500e345a3c1137b087253f7ab08a89f937c1c018875b6
+
+kubectl apply -f https://projectcalico.docs.tigera.io/archive/v3.22/manifests/calico.yaml
