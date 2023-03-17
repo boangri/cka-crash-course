@@ -13,7 +13,7 @@ spec:
           service:
             name: demo
             port:
-              number: 30236
+              number: 3000
         path: /
         pathType: Prefix
 status:
